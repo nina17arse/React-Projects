@@ -59,7 +59,7 @@ function App() {
 function Header() {
   return (
     <header className="header">
-      <h1> Fast React Pizza Co. </h1>;{" "}
+      <h1> Fast React Pizza Co. </h1>{" "}
     </header>
   );
 }
@@ -93,6 +93,18 @@ function Menu() {
         price={15}
         photoName="pizzas/salamino.jpg"
       />
+      <Pizza
+        name="Pizza Funghi"
+        ingredients="Tomato, mozarella, mushrooms, and onion"
+        price={15}
+        photoName="pizzas/funghi.jpg"
+      />
+      <Pizza
+        name="Pizza Margherita"
+        ingredients="Tomato and mozarella"
+        price={10}
+        photoName="pizzas/margherita.jpg"
+      />
     </main>
   );
 }
@@ -102,6 +114,7 @@ function Pizza(props) {
     <div className="pizza">
       <img src={props.photoName} alt={props.name} />
       <h3> {props.name} </h3> <p> {props.ingredients} </p>{" "}
+      <span>{props.price}</span>
     </div>
   );
 }
